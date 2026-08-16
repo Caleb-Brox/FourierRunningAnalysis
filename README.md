@@ -43,6 +43,8 @@ This provides a visual way to see how complicated biomechanical motion can be ap
 
 The reconstructed joint trajectories are combined into a stick-figure representation of the runner.
 
+![Fourier reconstructed running animation](assets/FourierRunningAnimation.gif)
+
 To simplify data collection and analysis, only one side of the runner was tracked in the original slow-motion video. The opposite arm and leg are approximated by duplicating the corresponding tracked motion and shifting it by half of the estimated stride period. This takes advantage of the approximately alternating motion of the limbs during running.
 
 The stride period is estimated from the dominant frequency of the reconstructed ankle motion.
@@ -53,15 +55,23 @@ The animation follows the timestamps in the original dataset. Because the source
 
 A separate interactive demonstration provides a more visual interpretation of the Fourier mathematics.
 
-The user draws a closed 2D shape with the mouse. The path is represented as a complex-valued signal:
+![Interactive Fourier epicycle demonstration](assets/FourierShapesDemo.gif)
+
+The user draws a 2D shape by clicking and dragging the mouse. When the mouse is released, the final point automatically connects back to the starting point to create a closed path.
+
+The path is represented as a complex-valued signal:
 
 `z(t) = x(t) + i*y(t)`
 
-A Fourier decomposition is then used to reconstruct the shape.
+A Fourier decomposition is then used to reconstruct the shape. The individual Fourier components are visualized as a chain of rotating vectors, or epicycles, whose endpoint traces the reconstructed shape.
 
-The individual Fourier components can be visualized as a chain of rotating vectors, or epicycles. As these vectors rotate and add together, their final endpoint traces the reconstructed shape.
+To try it yourself:
 
-This provides an intuitive geometric visualization of the same general idea used to reconstruct the running motion: complicated motion can emerge from the addition of relatively simple periodic components.
+1. Run `fourier_epicycles.m`.
+2. Click and hold inside the drawing window.
+3. Drag the mouse to draw a shape.
+4. Release the mouse to close the shape.
+5. Watch the Fourier components reconstruct the path.
 
 ## Project Structure
 
