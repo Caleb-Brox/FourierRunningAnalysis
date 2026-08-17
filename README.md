@@ -84,3 +84,15 @@ FourierRunningAnalysis/
 │   ├── fourier_running_animation.m
 │   └── fourier_epicycles.m
 └── README.md
+```
+
+### Inspiration and Sources
+
+This project was inspired by visual explanations of Fourier series showing how complex shapes and motion can be represented using combinations of simple periodic components.
+
+Two videos were particularly influential:
+
+- [What is a Fourier Series? (Explained by drawing circles) – Smarter Every Day 205](https://www.youtube.com/watch?v=ds0cmAV-Yek)
+- [But what is a Fourier series? From heat flow to drawing with circles – 3Blue1Brown](https://www.youtube.com/watch?v=r6sGWTCMz2k)
+
+These visualizations motivated me to explore whether the same mathematical ideas could be applied to real human running motion.
